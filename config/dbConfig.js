@@ -28,3 +28,5 @@ async function connectionToDb() {
 connectionToDb();
 
 module.exports = sequelize;
+
+

@@ -6,7 +6,7 @@ console.log("DATABASE:", process.env.DATABASE);
 console.log("USERNAME:", process.env.USERNAME);
 console.log("PASSWORD:", process.env.PASSWORD);
 
-const sequelize = new Sequelize("kryzen", "sa", process.env.PASSWORD, {
+const sequelize = new Sequelize("kryzendb", "avnadmin", process.env.PASSWORD, {
   host: process.env.HOST,
   dialect: "mysql",
   port: process.env.PORT,

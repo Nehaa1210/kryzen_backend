@@ -12,10 +12,13 @@ app.use(express.json());
 app.use("/products", productRouter);
 app.use("/users", userRouter);
 
+const PORT = process.env.PORT || 3000;  
+
 sequelize.sync().then(() => {
-  app.listen(3000, async () => {
+  app.listen(PORT, async () => {
     try {
       await sequelize.authenticate();
+      console.log(`Server running on port ${PORT}`);
       console.log("Database connected");
     } catch (error) {
       console.log("Error in connecting to the database.");

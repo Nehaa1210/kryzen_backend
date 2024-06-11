@@ -9,9 +9,9 @@ console.log("PASSWORD:", process.env.PASSWORD);
 const sequelize = new Sequelize("kryzen", "sa", process.env.PASSWORD, {
   host: "localhost",
   dialect: "mysql",
-  port: 3306,
+  port: process.env.PORT,
   dialectOptions: {
-    connectTimeout: 86400,
+    connectTimeout: 10000,
   },
   logging: console.log,
 });

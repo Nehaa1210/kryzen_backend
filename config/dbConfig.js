@@ -7,7 +7,7 @@ console.log("USERNAME:", process.env.USERNAME);
 console.log("PASSWORD:", process.env.PASSWORD);
 
 const sequelize = new Sequelize("kryzen", "sa", process.env.PASSWORD, {
-  host: "localhost",
+  host: process.env.HOST,
   dialect: "mysql",
   port: process.env.PORT,
   dialectOptions: {
